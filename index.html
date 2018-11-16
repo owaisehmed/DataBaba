@@ -7,6 +7,7 @@
 <script src="includes/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="includes/main.js"></script>
 <script type="text/javascript" src="includes/tilt.jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link href="includes/style.css" rel="stylesheet" type="text/css">
 <link href="includes/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<style>
@@ -30,7 +31,7 @@
 		  /*border-bottom: 2px solid black;  The typwriter cursor */	
 		  display: inline-block;
 		  overflow: hidden; /* Ensures the content is not revealed until the animation */
-		  border-right: 5px solid black; /* The typwriter cursor */
+		  border-right: 5px solid #000; /* The typwriter cursor */
 		  white-space: nowrap; /* Keeps the content on a single line */
 		  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
 		  animation: 
@@ -47,84 +48,23 @@
 		/* The typewriter cursor effect */
 		@keyframes blink-caret {
 		  from, to { border-right-color: #fff }
-		  50% { border-right-color: black; }
+		  50% { border-right-color: #000; }
 		}
 		
 	</style>
 
 </head>
-
+    
+    <script>
+        $(function(){
+           $("#header").load("header.html"); 
+        });
+    </script>
+   
 <body>
 <div class="site-wrapper">
-	<header>
-		<div class="nav">
-			<div class="logo"><a href="index.html"><img src="images/baba-logo.png"/></a></div>
-			<div class="menu-btn">
-				<span class="item"></span>
-				<span class="item"></span>
-				<span class="item"></span>
-			</div>
-		</div>
-
-		<div class="menu">
-			<svg id="organic-blob-2" class="animated-circle-2" width="450" height="450" xmlns="http://www.w3.org/2000/svg" filter="url(#goo2)">
-				<defs>
-					<filter id="goo2">
-						<!-- tympanus.net/codrops/creative-gooey-effects -->
-						<fegaussianblur in="SourceGraphic" stdDeviation="10" result="blur" />
-						<fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo2" />
-						<fecomposite in="SourceGraphic" in2="goo2" operator="atop"/>
-					</filter>
-				</defs>
-				<circle id="Circle5"></circle>
-				<circle id="Circle6"></circle>
-				<circle id="Circle7"></circle>
-				<circle id="Circle8"></circle>
-			</svg>
-			<div class="wrapper">
-				<div class="menu-header">
-					<div class="logo"><a href="index.html"><img src="images/baba-logo.png"/></a></div>
-					<div class="close-btn"><span class="fa fa-close"></span></div>
-				</div>
-
-				<div class="menu-items">
-					<a href="index.html" class="current">Home</a>
-					<a href="about.html">Agency</a>
-					<a href="services.html">Services</a>
-					<!--<a href="work.html">Work</a>-->
-					<a href="contact.html">Contact</a>
-				</div>
-
-				<div class="data">
-					<div class="headline">We are all about partnership<br><span style="font-size: 16px; font-weight: normal;">Because DataBaba cares</span></div>
-					<div class="meta-cont">
-						<div class="meta">
-							<div class="label">Email</div>
-							<div class="field">hello@datababa.com</div>
-						</div>
-						<div class="meta full" id="USAddress">
-							<div class="label">Bellevue Address</div>
-							<div class="field">10400 NE 4th St<br>Bellevue, WA 98004</div>
-							<div class="field">+1 206 226 6574</div>
-						</div>
-						<div class="meta full" id="PKAddress">
-							<div class="label">Karachi Address</div>
-							<div class="field">3rd Floor, 59-C, Tauheed Commerical, <br>Phase 5, DHA, Karachi</div>
-							<div class="field">+92 300 8927230</div>
-						</div>
-						<div class="social-icons">
-							<a href="https://www.facebook.com/datababapk" target="_blank"><span class="fa fa-facebook"></span></a>
-							<a href="https://twitter.com/Datababaio" target="_blank"><span class="fa fa-twitter"></span></a>
-							<a href="https://www.instagram.com/datababaio/" target="_blank"><span class="fa fa-instagram"></span></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</header>
-
-	<div class="content">
+    <div id="header"></div>
+    <div class="content">
 		<div class="wrapper fullwidth">
 			
 			<div class="home-title" style="width: auto;">Time to rethink everything.<br><span style="display:block; margin-top: 5px; font-weight: normal; font-size: 20px; color:#888; overflow: hidden;">We specialiaze in human-centered customer experience across <a class="typewrite" data-period="2000" data-type='[ "digital product innovation", "technology transformation", "inventive marketing" ]'><span class="wrap"></span></a></span></div>
